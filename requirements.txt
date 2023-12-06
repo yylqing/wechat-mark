@@ -1,0 +1,5 @@
+werkzeug==0.16.0
+wechatpy==1.8.18
+cryptography==36.0.1
+sanic==19.12.5
+redis==4.1.1
