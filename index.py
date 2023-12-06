@@ -13,7 +13,7 @@ import requests
 import os
 import sqlite3
 
-app = Sanic("memo-wx")
+app = Sanic("wx-mark")
 
 
 # 公众号的appid
@@ -61,7 +61,7 @@ if allowToken is None:
   allowToken = "zdyh2023"
 crypto = WeChatCrypto(token, encoding_aes_key, appid)
 
-@app.get("/memo-wx")
+@app.get("/wx-mark")
 def memoWXGET(request):
   print(request.args)
   signature = request.args.get("signature")
@@ -74,7 +74,7 @@ def memoWXGET(request):
   except InvalidSignatureException:
     return text("hello")
 
-@app.post("/memo-wx")
+@app.post("/wx-mark")
 def memoWXPOST(request):
   signature = request.args.get("signature")
   msg_signature = request.args.get("msg_signature")
