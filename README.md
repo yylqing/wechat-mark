@@ -73,3 +73,9 @@ redisPassword=
 --- 通过token来验证可以接入的用户（给有需要的人）
 allowToken=
 ```
+
+# 使用方法
+![使用截图](./images/usage.png)
+
+# 致谢
+程序修改自： [neno-wx](https://github.com/openneno/neno-wx)
